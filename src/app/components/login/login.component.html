@@ -5,19 +5,15 @@
     </div>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="login__form">
-            <div class="login__group">
-                <label class="login__label">E-mail</label>
-                <input type="email" class="login__input" formControlName="email">
-            </div>
+            <input type="email" class="login__input" placeholder="E-mail" formControlName="email">
     
-            <div class="login__group">
-                <label class="login__label">Senha</label>
-                <input type="password" class="login__input" formControlName="password">
-            </div>
+            <input type="password" class="login__input" placeholder="Senha" formControlName="password">
     
             <button type="submit" class="btn login__submit" [disabled]="!loginForm.valid">Entrar</button>
-
-            <button type="click" class="btn login__forget" (click)="forgotPassword()">Esqueci minha senha</button>
+            <div>
+                <span type="click" class=" login__forget" (click)="register()">Cadastrar</span>
+                <span type="click" class=" login__forget" (click)="forgotPassword()">Esqueci minha senha</span>
+            </div>
         </div>
     </form>
 </div>

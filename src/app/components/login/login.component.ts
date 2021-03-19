@@ -29,6 +29,10 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl('forgotPassword');
   }
 
+  register() {
+    this.router.navigateByUrl('register');
+  }
+
   onSubmit() {
     if(this.loginForm.valid) {
       this.loginService.login(this.loginForm.value).subscribe(
